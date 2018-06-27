@@ -1,0 +1,24 @@
+{
+  "dwarfs": [
+    {
+      "name": "Balin",
+      "age": 90,
+      "beard": "red mustache and beard"
+    },
+    {
+      "name": "Dvalin",
+      "age": 99,
+      "beard": "green mustache"
+    },
+    {
+      "name": "Gimli",
+      "age": 145,
+      "beard": "brown beard"
+    },
+    {
+      "name": "Gloin",
+      "age": 145,
+      "beard": "Is he really dwarf???"
+    }
+  ]
+}
