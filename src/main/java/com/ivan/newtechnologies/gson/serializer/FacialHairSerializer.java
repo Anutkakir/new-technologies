@@ -22,15 +22,18 @@ public class FacialHairSerializer implements JsonSerializer<FacialHair> {
         if (facialHair.isHasMustache()) {
             hairs.add("mustache");
         }
+
         if (facialHair.isHasBeard()) {
             hairs.add("beard");
         }
+
         String result;
         if (hairs.size() == 0) {
             result = "Is he really dwarf???";
         } else {
             result = facialHair.getColor() + " " + hairs.stream().collect(Collectors.joining(" and "));
         }
+
         return new JsonPrimitive(result);
     }
 
