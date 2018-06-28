@@ -40,6 +40,7 @@ dependencies {
     compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.9.5'
     compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jdk8', version: '2.9.5'
     compile group: 'io.projectreactor', name: 'reactor-core', version: '3.1.5.RELEASE'
+    compile group: 'org.jooq', name: 'jool', version: '0.9.14'
     compile(group: 'org.wso2.msf4j', name: 'msf4j-core', version:'2.4.2') {
         exclude(module: 'nimbus-jose-jwt')
         exclude(module: 'org.eclipse.osgi')
