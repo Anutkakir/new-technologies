@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://ivan.com">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://ivan.com" elementFormDefault="qualified"
+           xmlns="https://ivan.com">
 
     <xs:element name="todo-list">
         <xs:complexType>
@@ -12,17 +13,47 @@
 
     <xs:complexType name="itemsType">
         <xs:sequence>
-            <xs:element name="item" type="item" minOccurs="1" />
+            <xs:element name="item" type="item" minOccurs="1" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="item">
-        <xs:attribute name="id" type="xs:integer" />
         <xs:sequence>
             <xs:element name="name" type="xs:string" />
             <xs:element name="description" type="xs:string" />
             <xs:element name="due-date" type="xs:string" minOccurs="0" />
         </xs:sequence>
+        <xs:attribute name="id" type="xs:integer" />
     </xs:complexType>
 
+    <xs:complexType name="authorType">
+        <xs:all>
+            <xs:element name="firstname" type="xs:string" />
+            <xs:element name="lastname" type="xs:string" />
+            <xs:element name="age" type="age" />
+            <xs:element name="height" type="height" />
+            <xs:element name="weight" type="weight" />
+        </xs:all>
+    </xs:complexType>
+
+    <xs:simpleType name="age">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="10" />
+            <xs:maxInclusive value="120" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="height">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="20" />
+            <xs:maxInclusive value="300" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="weight">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="500" />
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>

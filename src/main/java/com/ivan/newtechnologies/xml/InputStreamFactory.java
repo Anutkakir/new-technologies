@@ -8,4 +8,7 @@ public class InputStreamFactory {
         return InputStreamFactory.class.getClassLoader().getResourceAsStream("xml/todo-list.xml");
     }
 
+    public static InputStream getSchema() {
+        return InputStreamFactory.class.getClassLoader().getResourceAsStream("xml/todo-list.xsd");
+    }
 }
