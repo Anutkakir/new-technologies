@@ -1,0 +1,24 @@
+<todo-list xmlns="https://ivan.com">
+    <items>
+        <item id="1">
+            <name>Create something</name>
+            <description>Create something useful</description>
+        </item>
+        <item id="2">
+            <name>Delete something</name>
+            <description>Delete something useless</description>
+        </item>
+        <item id="3">
+            <name>Update something</name>
+            <description>Update something obsolete</description>
+            <due-date>2018-12-25</due-date>
+        </item>
+    </items>
+    <author>
+        <firstname>Ivan</firstname>
+        <lastname>Stankov</lastname>
+        <age>25</age>
+        <height>173</height>
+        <weight>62.5</weight>
+    </author>
+</todo-list>
