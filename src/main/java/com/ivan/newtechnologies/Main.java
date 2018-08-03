@@ -1,7 +1,8 @@
 package com.ivan.newtechnologies;
 
-import java.util.Random;
+import com.google.common.net.UrlEscapers;
 
+import java.net.URLEncoder;
 import java.util.regex.Pattern;
 
 public class Main {
@@ -16,6 +17,10 @@ public class Main {
 
         System.out.println(pattern.matcher("asdf123-123ddfd").matches());
 
+        System.out.println(URLEncoder.encode("-._~!$'()*,;&=@:+/? ", "UTF-8"));
+        System.out.println(UrlEscapers.urlFormParameterEscaper().escape("-._~!$'()*,;&=@:+/? "));
+        System.out.println(UrlEscapers.urlFragmentEscaper().escape("-._~!$'()*,;&=@:+/? "));
+        System.out.println(UrlEscapers.urlPathSegmentEscaper().escape("-._~!$'()*,;&=@:+/? "));
     }
 
 }
