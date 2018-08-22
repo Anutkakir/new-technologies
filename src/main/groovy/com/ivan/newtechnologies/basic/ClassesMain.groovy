@@ -1,5 +1,6 @@
 package com.ivan.newtechnologies.basic
 
+
 import org.codehaus.groovy.runtime.typehandling.GroovyCastException
 
 class ClassesMain {
@@ -17,9 +18,15 @@ class ClassesMain {
             // exception because there is no 'email' field in Person class
         }
 
-        // because of casting (as Person) there will be no exception, but p2 object will be empty
+        // because of coercing (as Person) there will be no exception, but p2 object will be empty
         Person p2 = nameAgeEmail as Person
         println p2
+
+        def p3 = new Person()
+        p3.metaClass.sayHi {
+            println "Hi everybody!"
+        }
+        p3.sayHi()
     }
 
 }

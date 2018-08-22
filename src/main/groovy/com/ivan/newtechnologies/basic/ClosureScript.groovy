@@ -8,5 +8,18 @@ def c2 = { name -> println "Hello, $name!" }
 c2.call("World")
 c2("World")
 
+class P {
+    String name
+    def sayHi() {
+        println "Hello, world!"
+    }
+}
+
+def c3 = { // fields and methods accessed without an object, will be accessed on the delegate
+    println name
+    sayHi()
+}
+c3.delegate = new P(name: 'Helga')
+c3()
 
 
