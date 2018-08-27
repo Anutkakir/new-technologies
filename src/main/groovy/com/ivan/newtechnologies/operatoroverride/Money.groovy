@@ -1,9 +1,8 @@
 package com.ivan.newtechnologies.operatoroverride
 
-import groovy.transform.Canonical
-import groovy.transform.Immutable
 
-@Canonical
+import groovy.transform.Immutable
+//@Canonical
 @Immutable
 class Money {
 

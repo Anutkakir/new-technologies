@@ -49,6 +49,7 @@ dependencies {
             'org.apache.poi:poi:3.17',
             'org.apache.poi:poi-ooxml:3.17', // it is for XML-based format, like xlsx
             'org.springframework:spring-jms:5.0.8.RELEASE',
+            'org.springframework:spring-web:5.0.8.RELEASE',
             'javax.jms:javax.jms-api:2.0.1'
     compile(group: 'org.wso2.msf4j', name: 'msf4j-core', version:'2.4.2') {
         exclude(module: 'nimbus-jose-jwt')

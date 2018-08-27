@@ -22,4 +22,10 @@ def c3 = { // fields and methods accessed without an object, will be accessed on
 c3.delegate = new P(name: 'Helga')
 c3()
 
+def sayHi(String name, Closure<String> convertName) {
+    println convertName(name)
+}
+sayHi('John') {
+    it.toUpperCase()
+}
 
