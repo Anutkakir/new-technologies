@@ -1,0 +1,30 @@
+{
+  "items": {
+    "item": [
+      {
+        "id": "1",
+        "name": "Create something",
+        "description": "Create something useful"
+      },
+      {
+        "id": "2",
+        "name": "Delete something",
+        "description": "Delete something useless"
+      },
+      {
+        "id": "3",
+        "name": "Update something",
+        "description": "Update something obsolete",
+        "due-date": "2018-12-25"
+      }
+    ]
+  },
+  "author": {
+    "firstname": "Ivan",
+    "lastname": "Stankov",
+    "age": "25",
+    "height": "173",
+    "weight": "62.5"
+  }
+}
+
