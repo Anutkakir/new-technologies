@@ -15,11 +15,13 @@ class Ch extends DefaultHandler {
     private List<String> pinpointHierarchy
     private Deque<String> tagHierarchy
     private StringBuilder text
+    private boolean processed
 
     PinpointContentHandler(final Linkable root) {
         this.root = root
 
         this.pinpointHierarchy = []
+        this.processed = false
         this.reset()
     }
 
@@ -55,16 +57,24 @@ class Ch extends DefaultHandler {
             return
         }
 
+        if (this.tagHierarchy.size() == 3) {
+            this.processed = true
+        }
+
         this.tagHierarchy.remove(localName)
 
-        if (!this.tagHierarchy) {
+        if (this.tagHierarchy.size() == 1) {
             this.reset()
         }
     }
 
     private void reset() {
+        if (this.tagHierarchy != null) {
+            this.tagHierarchy.clear()
+        } else {
+            this.tagHierarchy = [] as LinkedList
+        }
 
-        this.tagHierarchy = [] as LinkedList
         this.text = new StringBuilder()
     }
 
