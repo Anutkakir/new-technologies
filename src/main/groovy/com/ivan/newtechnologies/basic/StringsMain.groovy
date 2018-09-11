@@ -31,6 +31,14 @@ Second line'''
 
         String s6 = $/dollar slashy string $ $num //$
         println s6 // dollar slashy string $ 15 /
+
+        String s7 = "a" * 255
+        println s7.length()
+
+        String a = " "
+        if (a) {
+            println "Inside if"
+        }
     }
 
 }
