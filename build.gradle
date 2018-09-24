@@ -13,6 +13,7 @@ repositories {
      maven { url "http://maven.wso2.org/nexus/content/repositories/snapshots/" }
      maven { url "http://maven.wso2.org/nexus/content/groups/wso2-public/" }
      maven { url "http://repo.maven.apache.org/maven2" }
+     maven { url "https://artifact.aspose.com/repo/" }
 }
 
 dependencies {
@@ -48,6 +49,8 @@ dependencies {
             'com.sun.xml.bind:jaxb-core:2.3.0.1',
             'org.apache.poi:poi:3.17',
             'org.apache.poi:poi-ooxml:3.17', // it is for XML-based format, like xlsx
+            'com.aspose:aspose-words:18.7:jdk16',
+            'log4j:log4j:1.2.17',
             'org.springframework:spring-jms:5.0.8.RELEASE',
             'org.springframework:spring-web:5.0.8.RELEASE',
             'javax.jms:javax.jms-api:2.0.1'
